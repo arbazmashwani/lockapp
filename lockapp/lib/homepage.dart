@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lockapp/quiz.dart';
 import 'dart:math' as math;
 
+import 'package:lockapp/screens/mathquiz.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -276,6 +278,13 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             children: [
                               ListTile(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const MathQuiz()),
+                                  );
+                                },
                                 title: Text(
                                   e.isEven
                                       ? "Engish Language"
